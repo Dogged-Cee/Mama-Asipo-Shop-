@@ -3,68 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mama Asipo Shop | Websites & Products</title>
+    <title>Mama Asipo Shop</title>
 
-    <!-- CSS LINK -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Mama Asipo Shop</h1>
-        <p>We build websites for small businesses & sell products</p>
-    </header>
+<!-- HEADER -->
+<header>
+    <h1>Mama Asipo Shop</h1>
+    <p>We build websites for small businesses & sell products</p>
 
-    <!-- HERO SECTION -->
-    <section>
-        <h2>Grow Your Business Online</h2>
-        <p>
-            We design modern, responsive, and affordable websites
-            to help small businesses grow and reach more customers.
-        </p>
-    </section>
+    <a href="#contact" class="cta">Get Your Website Today</a>
+</header>
 
-    <!-- ABOUT -->
-    <section>
-        <h2>About Us</h2>
-        <p>
-            Mama Asipo Shop is a digital service provider helping small businesses
-            build a strong online presence through websites and product solutions.
-        </p>
-    </section>
+<!-- NAVIGATION -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <!-- SERVICES -->
-    <section>
-        <h2>Our Services</h2>
+<!-- HOME -->
+<section id="home">
+    <h2>Welcome</h2>
+    <p>We help small businesses go online and grow faster.</p>
+</section>
 
-        <h3>Website Development</h3>
-        <p>We build professional websites for businesses and individuals.</p>
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our Services</h2>
 
-        <h3>Business Growth Solutions</h3>
-        <p>Helping your business reach more customers online.</p>
+    <h3>Website Development</h3>
+    <p>We create modern, fast, and mobile-friendly websites.</p>
 
-        <h3>Product Sales</h3>
-        <p>We also sell quality products for everyday needs.</p>
-    </section>
+    <h3>Business Setup</h3>
+    <p>We help businesses get online presence and branding.</p>
 
-    <!-- CONTACT -->
-    <section>
-        <h2>Contact Us</h2>
+    <h3>Product Sales</h3>
+    <p>We also sell quality products at affordable prices.</p>
+</section>
 
-        <p><strong>Phone 1:</strong> 0706199963</p>
-        <p><strong>Phone 2:</strong> 0758882026</p>
-        <p><strong>Phone 3:</strong> 0792055648</p>
+<!-- PRICING -->
+<section id="pricing">
+    <h2>Website Prices</h2>
 
-        <h3>Social Media</h3>
-        <p>Dogged cee on WhatsApp, Instagram & Facebook</p>
-    </section>
+    <p>Starter Website: <strong>KES 3,000 - 5,000</strong></p>
+    <p>Business Website: <strong>KES 6,000 - 12,000</strong></p>
+    <p>Advanced Website: <strong>KES 15,000+</strong></p>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Mama Asipo Shop. All Rights Reserved.</p>
-    </footer>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <p>Location: Ahero, Kisumu, Kenya</p>
+
+    <p>Phone: 0706199963 / 0758882026 / 0792055648</p>
+
+    <p>
+        Follow us:
+        Dogged cee on WhatsApp, Instagram, Facebook
+    </p>
+
+    <h3>Send Order on WhatsApp</h3>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="product" placeholder="Product / Service" required>
+        <textarea id="message" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send on WhatsApp</button>
+
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Mama Asipo Shop. All Rights Reserved.</p>
+</footer>
+
+<!-- JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
