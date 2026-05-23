@@ -1,21 +1,23 @@
 /* =========================
-   MAMA ASIPO SHOP - JS
+   MAMA ASIPO SHOP JS
+   STABLE VERSION
 ========================= */
 
 console.log("Mama Asipo Shop JS loaded successfully 🚀");
 
 /* =========================
-   SMOOTH SCROLL NAVIGATION
+   SMOOTH NAVIGATION
 ========================= */
-document.querySelectorAll("nav a").forEach(link => {
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
     link.addEventListener("click", function (e) {
         e.preventDefault();
 
-        const targetId = this.getAttribute("href");
-        const targetSection = document.querySelector(targetId);
+        const target = document.querySelector(this.getAttribute("href"));
 
-        if (targetSection) {
-            targetSection.scrollIntoView({
+        if (target) {
+            target.scrollIntoView({
                 behavior: "smooth"
             });
         }
@@ -23,32 +25,35 @@ document.querySelectorAll("nav a").forEach(link => {
 });
 
 /* =========================
-   SCROLL ANIMATION (SHOW SECTIONS)
+   SCROLL REVEAL ANIMATION
 ========================= */
-window.addEventListener("scroll", function () {
+function revealSections() {
     const sections = document.querySelectorAll("section");
 
     sections.forEach(section => {
-        const position = section.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
+        const windowHeight = window.innerHeight;
+        const sectionTop = section.getBoundingClientRect().top;
 
-        if (position < screenHeight - 100) {
+        if (sectionTop < windowHeight - 80) {
             section.classList.add("show");
         }
     });
-});
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
 
 /* =========================
-   WHATSAPP ORDER FORM
+   WHATSAPP ORDER SYSTEM
 ========================= */
 function sendToWhatsApp() {
-    let name = document.getElementById("name").value;
-    let product = document.getElementById("product").value;
-    let message = document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const product = document.getElementById("product").value;
+    const message = document.getElementById("message").value;
 
-    let phone = "254706199963";
+    const phone = "254706199963";
 
-    let url =
+    const url =
         "https://wa.me/" + phone +
         "?text=Hello Mama Asipo Shop%0A%0A" +
         "Name: " + name + "%0A" +
