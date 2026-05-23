@@ -1,119 +1,175 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
     background: #0f172a;
-    color: #e2e8f0;
+    color: #e5e7eb;
     line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 header {
-    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    background: linear-gradient(135deg, #2563eb, #1e40af);
     text-align: center;
-    padding: 40px 20px;
-    color: white;
+    padding: 60px 20px;
 }
 
 header h1 {
-    font-size: 38px;
-    letter-spacing: 1px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin-top: 10px;
     font-size: 16px;
     opacity: 0.9;
 }
 
-/* NAVIGATION */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav a {
-    color: #e2e8f0;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background: #2563eb;
-    color: white;
-}
-
-/* SECTIONS (GLASS CARD STYLE) */
-section {
-    background: rgba(255, 255, 255, 0.05);
-    margin: 20px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    backdrop-filter: blur(10px);
-}
-
-/* HEADINGS */
-h2 {
-    color: #60a5fa;
-    margin-bottom: 10px;
-}
-
-h3 {
-    color: #93c5fd;
-    margin-top: 15px;
-}
-
-/* PARAGRAPHS */
-p {
-    margin-bottom: 10px;
-    color: #cbd5e1;
-}
-
-/* WHATSAPP BUTTON */
-a[href*="wa.me"] {
+/* CTA BUTTON */
+.cta {
     display: inline-block;
     margin-top: 15px;
     background: #25D366;
     color: white;
-    padding: 12px 18px;
+    padding: 12px 20px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
 
-a[href*="wa.me"]:hover {
+.cta:hover {
     background: #1ebe5d;
     transform: scale(1.05);
 }
 
-/* FOOTER */
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #111827;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #2563eb;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    margin: 20px;
+    padding: 25px;
+    background: #1e293b;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 15px;
+    color: #93c5fd;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* BUTTON (IMPORTANT FIX) */
+button {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #94a3b8;
+    background: #111827;
+    margin-top: 20px;
 }
 
-/* RESPONSIVE */
+/* =========================
+   ANIMATION (JS SUPPORT)
+========================= */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -122,9 +178,5 @@ footer {
 
     header h1 {
         font-size: 28px;
-    }
-
-    section {
-        margin: 10px;
     }
 }
